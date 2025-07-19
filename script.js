@@ -13,4 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = mailto;
     });
   }
+
+  // Burger menu functionality
+  const burger = document.querySelector('.burger');
+  const navLinks = document.getElementById('navLinks');
+  if (burger && navLinks) {
+    burger.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+      const expanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', !expanded);
+    });
+    // Close menu on link click (mobile UX)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 }); 
