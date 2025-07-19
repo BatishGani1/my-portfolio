@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eShop - Your Online Store</title>
+    <link rel="icon" type="image/png" href="media/shop.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="media/shop.png" alt="eShop Logo">
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search products...">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+        <div class="right-section">
+            <div class="options">
+                <a href="assets/signin.html"><button>Sign In</button></a> 
+                <a href="assets/signup.html"><button>Sign Up</button></a>
+            </div>
+            <div class="cart">
+                <a href="assets/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="category-bar">
+        <a href="#" class="category-item">
+            <img src="media/Grocery-Items-PNG-HD-Quality.png" alt="Kilos">
+            <span>Kilos</span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="media/samsung.png" alt="Mobiles">
+            <span>Mobiles</span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="media/R.png" alt="Fashion">
+            <span>Fashion 
+                <select>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="media/Electronicpng.png" alt="Electronics">
+            <span>Electronics 
+                <select>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="media/a.png" alt="Home & Furniture">
+            <span>Home & Furniture 
+                <select>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="media/appliances.png" alt="Appliances">
+            <span>Appliances</span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="media/R (1).png" alt="Flight Bookings">
+            <span>Flight Bookings</span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="media/R (2).png" alt="Beauty, Toys & More">
+            <span>Beauty, Toys & More 
+                <select>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="media/Mahindra-Two-Wheelers-Free-PNG.png" alt="Two Wheelers">
+            <span>Two Wheelers 
+                <select>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </span>
+        </a>
+    </div>
+
+    <section class="hero">
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="slide fade">
+                <img src="media/3.jpeg" alt="Product 1">
+                <div class="text-overlay">
+                    <h1>Shop the Latest Trends</h1>
+                    <p>Discover our new collection now!</p>
+                    <a href="#" class="btn">Shop Now</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide fade">
+                <img src="media/OIP(1).jpg" alt="Product 2">
+                <div class="text-overlay">
+                    <h1>Exclusive Deals Await</h1>
+                    <p>Up to 50% off this week only!</p>
+                    <a href="#" class="btn">Grab Yours</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide fade">
+                <img src="media/OIP.jpg" alt="Product 3">
+                <div class="text-overlay">
+                    <h1>Free Shipping Today</h1>
+                    <p>Order now and save more!</p>
+                    <a href="#" class="btn">Start Shopping</a>
+                </div>
+            </div>
+            <!-- Navigation Dots -->
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <div class="featured-products">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-badge">New</div>
+                <div class="product-image-container">
+                    <img src="media/rose.jpg" alt="Premium Rose Bouquet" class="product-image">
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                        <a href="assets/product.html?id=1" class="action-btn"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Premium Rose Bouquet</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">₹3,999</span>
+                        <span class="original-price">₹4,999</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-badge hot">Hot</div>
+                <div class="product-image-container">
+                    <img src="media/samsung.png" alt="Smartphone XS Pro" class="product-image">
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                        <a href="assets/product.html?id=2" class="action-btn"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Smartphone XS Pro</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">₹72,999</span>
+                        <span class="original-price">₹79,999</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-badge sale">Sale</div>
+                <div class="product-image-container">
+                    <img src="media/Electronicpng.png" alt="Wireless Headphones" class="product-image">
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                        <a href="assets/product.html?id=3" class="action-btn"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Wireless Headphones</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4.0)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">₹15,999</span>
+                        <span class="original-price">₹19,999</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="media/appliances.png" alt="Smart Home Speaker" class="product-image">
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                        <a href="assets/product.html?id=4" class="action-btn"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Smart Home Speaker</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                        <span>(3.5)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">₹10,499</span>
+                        <span class="original-price">₹12,999</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-badge">Eco</div>
+                <div class="product-image-container">
+                    <img src="media/R.png" alt="Organic Cotton T-Shirt" class="product-image">
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                        <a href="assets/product.html?id=5" class="action-btn"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Organic Cotton T-Shirt</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4.0)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">₹2,499</span>
+                        <span class="original-price">₹2,999</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-badge premium">Premium</div>
+                <div class="product-image-container">
+                    <img src="media/a.png" alt="Luxury Watch Collection" class="product-image">
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                        <a href="assets/product.html?id=6" class="action-btn"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Luxury Watch Collection</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.7)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">₹24,999</span>
+                        <span class="original-price">₹29,999</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>eShop</h3>
+                <p>Your one-stop shop for quality products at unbeatable prices.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Support</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h3>Newsletter</h3>
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 eShop. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Auto slide every 5 seconds
+        setInterval(() => {
+            slideIndex++;
+            showSlides(slideIndex);
+        }, 5000);
+
+        // Manual slide control
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.right-section').classList.toggle('active');
+            document.querySelector('.category-bar').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
