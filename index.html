@@ -89,6 +89,33 @@
       </div>
     </div>
   </section>
+  <!-- Awards Section Start -->
+  <section id="awards" class="awards-section">
+    <div class="container">
+      <h2>Awards & Certificates</h2>
+      <div class="certificates-grid">
+        <div class="certificate-card">
+          <div class="certificate-title">Android App Development Training - Certificate of Completion</div>
+          <div class="certificate-preview">
+            <iframe src="assets/certificates/Android App Development Training - Certificate of Completion.pdf#toolbar=0" title="Android App Development Certificate" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="certificate-card">
+          <div class="certificate-title">CAN_26650251_3778938</div>
+          <div class="certificate-preview">
+            <iframe src="assets/certificates/CAN_26650251_3778938.pdf#toolbar=0" title="CAN_26650251_3778938" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="certificate-card">
+          <div class="certificate-title">Student Certificate</div>
+          <div class="certificate-preview">
+            <iframe src="assets/certificates/Student_Certificate (10).pdf#toolbar=0" title="Student Certificate" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Awards Section End -->
   <section id="contact" class="contact-section">
     <div class="container">
       <h2>Contact</h2>
@@ -97,6 +124,7 @@
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
+        <div id="form-status" style="margin-top:10px;"></div>
       </form>
       <div class="social-links">
         <a href="mailto:Batishwani04@gmail.com">Email</a>
@@ -111,6 +139,30 @@
       <p>&copy; 2025 Batish Gani. All rights reserved.</p>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    (function() {
+      emailjs.init('YOUR_EMAILJS_USER_ID'); // TODO: Replace with your EmailJS user ID
+    })();
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = this;
+      var status = document.getElementById('form-status');
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+        from_name: form.name.value,
+        from_email: form.email.value,
+        message: form.message.value
+      })
+      .then(function() {
+        status.textContent = 'Message sent successfully!';
+        status.style.color = 'green';
+        form.reset();
+      }, function(error) {
+        status.textContent = 'Failed to send message. Please try again later.';
+        status.style.color = 'red';
+      });
+    });
+  </script>
 </body>
 </html> 
