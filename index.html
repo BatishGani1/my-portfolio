@@ -59,8 +59,8 @@
         </div>
         <div class="project-card">
           <img src="https://via.placeholder.com/400x200?text=Portfolio+Website" alt="Portfolio Website" />
-          <h3>Portfolio Website</h3>
-          <p>This portfolio website is currently under process. Stay tuned for updates and new features!</p>
+          <h3>Hadi AI</h3>
+          <p>Hadi AI is an Islamic AI model that will learn the Quran, Hadith, and Islamic history, and answer all queries about Islam.</p>
           <span class="tech">HTML</span> <span class="tech">CSS</span> <span class="tech">JavaScript</span>
           <a href="#" class="project-link disabled" tabindex="-1">In Progress</a>
         </div>
@@ -124,7 +124,6 @@
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
-        <div id="form-status" style="margin-top:10px;"></div>
       </form>
       <div class="social-links">
         <a href="mailto:Batishwani04@gmail.com">Email</a>
@@ -139,29 +138,17 @@
       <p>&copy; 2025 Batish Gani. All rights reserved.</p>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="script.js"></script>
   <script>
-    (function() {
-      emailjs.init('YOUR_EMAILJS_USER_ID'); // TODO: Replace with your EmailJS user ID
-    })();
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       var form = this;
-      var status = document.getElementById('form-status');
-      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-        from_name: form.name.value,
-        from_email: form.email.value,
-        message: form.message.value
-      })
-      .then(function() {
-        status.textContent = 'Message sent successfully!';
-        status.style.color = 'green';
-        form.reset();
-      }, function(error) {
-        status.textContent = 'Failed to send message. Please try again later.';
-        status.style.color = 'red';
-      });
+      var name = form.name.value.trim();
+      var email = form.email.value.trim();
+      var message = form.message.value.trim();
+      var text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+      var whatsappUrl = `https://wa.me/918899127434?text=${text}`;
+      window.open(whatsappUrl, '_blank');
     });
   </script>
 </body>
